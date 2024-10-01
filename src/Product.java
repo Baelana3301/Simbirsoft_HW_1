@@ -14,12 +14,4 @@ public abstract class Product {
     public static int getProdCount() {
         return prodCount;
     }
-
-    public interface Discountable {
-        void applyDiscount(double discountPercentage);
-    }
-
-    public interface Reviewable {
-        void addReview(String review);
-    }
 }
