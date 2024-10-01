@@ -1,4 +1,8 @@
+import java.text.DecimalFormat;
+
 public class Electronics extends Product implements Discountable, Reviewable {
+    DecimalFormat df = new DecimalFormat("0.00");
+
     private final String brand;
     private final String model;
     private boolean isDiscountApplied;
@@ -20,7 +24,7 @@ public class Electronics extends Product implements Discountable, Reviewable {
         if (!isDiscountApplied) {
             price -= price * (discountPercentage / 100);
             isDiscountApplied = true;
-            System.out.println("Discount applied. New price: $" + price);
+            System.out.println("Discount applied. New price: $" + df.format(price));
         } else {
             System.out.println("Discount is already applied.");
         }
